@@ -13,6 +13,6 @@ jobs:
     steps:
       - run: node --version
       - run: npm --version
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - run: npm install
       - run: node app.js
