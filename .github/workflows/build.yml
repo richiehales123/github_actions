@@ -22,9 +22,11 @@ jobs:
 
       - name: Checkout code - Build docker image and test with Trivy
         uses: actions/checkout@v2
+
       - name: Build an image from Dockerfile
         run: |
           docker build -t docker.io/my-organization/my-app:${{ github.sha }} .
+          
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@0.20.0
         with:
