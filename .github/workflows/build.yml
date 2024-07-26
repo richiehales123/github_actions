@@ -15,6 +15,9 @@ jobs:
       - name: Install node
         run: npm install
 
+      - name: Run tests
+        run: npm test
+
       - name: Build and push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
