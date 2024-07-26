@@ -1,5 +1,5 @@
 # Get Node.js 20 image from the Docker Hub
-FROM node:20
+FROM node:20-slim
 
 # Set the working directory in the container to /app
 WORKDIR /app
