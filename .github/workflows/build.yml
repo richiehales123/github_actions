@@ -18,7 +18,7 @@ jobs:
       - name: Build and push Docker image
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
-          image: richiehales1/image-name
+          image: richiehales1/github_actions
           tags: v1, latest
           registry: docker.io
           dockerfile: Dockerfile.ci
