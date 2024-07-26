@@ -11,8 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     container: node:16
     steps:
-      - run: node --version
-      - run: npm --version
-      - uses: actions/checkout@v4
-      - run: npm install
-      - run: node index.js
+      # - run: node --version
+      # - run: npm --version
+    - uses: actions/checkout@v4
+
+    - name: Install node
+      run: npm install
+
+    # - name: Start app.js
+    #   run: node app.js
+
+    - name: Build and push Docker image
+      uses: mr-smithers-excellent/docker-build-push@v6
+      with:
+        image: richiehales1/image-name
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
