@@ -21,6 +21,6 @@ jobs:
           image: richiehales1/github_actions
           tags: v1, latest
           registry: docker.io
-          dockerfile: Dockerfile.ci
+          dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
